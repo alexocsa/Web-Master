@@ -1,0 +1,153 @@
+.testimonials {
+    background: $ColorPrimario;
+    padding: 0 0 100px 0;
+    width: 100%;
+    min-width: 320px;
+    .contact {
+        width: 100%;
+        min-width: 320px;
+        background: $ColorTerciario;
+        padding-bottom: 40px;
+        i {
+            color: $ColorClaro;
+            display: block;
+            font-size: 6rem;
+            line-height: 130px;
+            text-align: center;
+        }
+        &__number {
+            color: $ColorClaro;
+            display: block;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 40px;
+            text-align: center;
+        }
+        &__hi {
+            color: $ColorClaro;
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: -3px;
+    }
+    &__header {
+        @include styleSpan;
+        padding-top: 100px;
+    }
+    &__header::before {
+        @include styleBefore
+    }
+    &__title {
+        @include styleTitle;
+    }
+    &__container {
+        display: flex;
+        max-width: 650px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        input {
+            display: none;
+        }
+        .article__testimonials {
+            margin: 50px auto 0 auto;
+            max-width: 650px;
+            min-width: 100vw;
+            padding: 50px 30px;
+            text-align: center;
+            transition: .6s linear;
+            width: 100%;
+            &--img {
+                border-radius: 50%;
+                box-shadow: 0 0 5px #ffffff50;
+                display: block;
+                height: 150px;
+                margin: 0 auto;
+                width: 150px;
+            }
+            &--title {
+                color: $ColorClaro;
+                font-size: 2rem;
+                margin-top: 30px;
+                text-align: center;
+            }
+            &--span {
+                @include colorText;
+                font-size: 1.6rem;
+                line-height: 4rem;
+            }
+            &--description {
+                color: $ColorSecundario;
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+                margin-top: 30px;
+            }
+        }
+        .navigation__auto {
+            bottom: 0; 
+            display: flex;
+            left: calc(50% - 125px);
+            justify-content: center;
+            position: absolute;
+            width: 250px;
+            div {
+                border: 2px solid $ColorClaro;
+                border-radius: 10px;
+                margin: 0 10px;
+                padding: 5px;
+            }
+        }
+        .manual__btn {
+            bottom: 0; 
+            display: flex;
+            justify-content: center;
+            left: calc(50% - 125px);
+            position: absolute;
+            width: 250px;
+            .label-btn {
+                border: 2px solid $ColorClaro;
+                border-radius: 10px;
+                margin: 0 10px;
+                padding: 5px;
+            }
+            .label-btn:hover {
+                background: $ColorTerciario;
+            }
+            .label-btn:checked {
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+        #radio-1:checked ~ .first {
+            margin-left: 0;
+        }
+        #radio-2:checked ~ .first {
+            margin-left: -100%;
+        }
+        #radio-3:checked ~ .first {
+            margin-left: -200%;
+        }
+        #radio-4:checked ~ .first {
+            margin-left: -300%;
+        }
+        #radio-1:checked ~ .navigation__auto .auto-btn1 {
+            background: $ColorTerciario;
+        }
+        #radio-2:checked ~ .navigation__auto .auto-btn2 {
+            background: $ColorTerciario;
+        }
+        #radio-3:checked ~ .navigation__auto .auto-btn3 {
+            background: $ColorTerciario;
+        }
+        #radio-4:checked ~ .navigation__auto .auto-btn4 {
+            background: $ColorTerciario;
+        }
+    }
+}

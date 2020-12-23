@@ -1,0 +1,59 @@
+.footer {
+    background: $ColorPrimario;
+    padding: 50px 0 0 0;
+    width: 100%;
+    min-width: 320px;
+    &__profile {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+        img {
+            border-radius: 50%;
+            box-shadow: 0 0 3px #ffffff30;
+            display: block;
+            height: 100px;
+            margin: 0 auto;
+            width: 100px;
+        }
+        h3 {
+            color: $ColorClaro;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        span {
+            @include colorText;
+            display: block;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+        }
+        ul li {
+            background: $ColorTerciario;
+            border-radius: 50%;
+            display: inline-block;
+            height: 40px;
+            margin: 30px 5px;
+            width: 40px;
+            a {
+                color: $ColorClaro;
+                font-size: 2rem;
+                line-height: 40px;
+                text-decoration: none;
+            }
+        }
+    }
+    .copywrite {
+        background-color: $ColorPrimario2;
+        padding: 20px;
+        width: 100%;
+        min-width: 320px;
+        span {
+            color: $ColorSecundario;
+            display: block;
+            font-size: 1.4rem;
+            margin: 0 auto;
+            text-align: center;
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.about {
+    background-color: $ColorPrimario;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+    min-width: 320px;
+    h3 {
+        @include styleSection;
+        @include styleText;
+        font-size: 2.6rem;
+        line-height: 30px;
+        text-align: center;
+    }
+    p {
+        @include styleSection;
+        color: $ColorSecundario;
+        font-family: $Font1;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        padding-top: 30px;
+        text-align: center;
+    }
+    a {
+        @include styleButton;
+    }
+    .sobreMi{
+        @include styleSection;
+        img {
+            border-radius: 50%;
+            display: block;
+            height: 200px;
+            margin: 50px auto;
+            width: 200px;
+            box-shadow: 0 0 5px #ffffff30;
+        }
+        span {
+            @include colorText;
+            display: block;
+            font-size: 1.6rem;
+            font-family: $Font1;
+            font-weight: 600;
+            line-height: 2.6rem;
+            text-align: center;
+        }
+    }
+    .datos {
+        @include styleSection;
+        padding-top: 50px;
+        max-width: 580px;
+        h4 {
+            color: $ColorClaro;
+            font-size: 2rem;
+            font-family: $Font1;
+            font-weight: 500;
+        }
+        ul li {
+            list-style: none;
+            color: $ColorClaro;
+            margin: 15px;
+            font-size: 1.6rem;
+            font-family: $Font1;
+        }
+        ul li i {
+            @include colorText;
+            margin-right: 10px;
+        }
+    }
+}

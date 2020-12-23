@@ -1,0 +1,24 @@
+.process {
+    background: $ColorPrimario2;
+    min-width: 320px;
+    padding: 100px 0;
+    width: 100%;
+    &__header {
+        @include styleSpan;
+    }
+    &__header::before {
+        @include styleBefore;
+    }
+    &__title {
+        @include styleTitle;
+    }
+    &__container {
+        margin: 100px auto 0 auto;
+        min-width: 280px;
+        text-align: center;
+        width: 90%;
+        .article__process {
+            @include styleArticle;
+        }
+    }
+}

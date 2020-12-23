@@ -1,0 +1,124 @@
+$ColorPrimario: #111111;
+$ColorPrimario2: #1e2021;
+$ColorSecundario: #777777;
+$ColorClaro: #fff;
+$ColorTerciario: linear-gradient(45deg,#3060e5 0%,#4785de 0%,#2ac39c 100%);
+$buttonHover: linear-gradient(-45deg,#3060e5 0%,#4785de 0%,#2ac39c 100%);
+
+$Font1: "Fira Sans", sans-serif;
+
+@mixin colorText {
+    background: linear-gradient(90deg, rgb(21, 61, 170), rgb(64, 142, 231), rgb(86, 163, 241));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@mixin styleText {
+    color: $ColorClaro;
+    font-family: $Font1;
+}
+@mixin styleSection {
+    min-width: 280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+@mixin styleSpan {
+    color: $ColorClaro;
+    display: block;
+    font-size: 2.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+}
+@mixin styleBefore {
+    border-bottom: 3px solid #35abb4;
+    content: '';
+    margin: 0 auto;
+    position: absolute;
+    width: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin styleTitle {
+    color: $ColorClaro;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    width: 90%
+}
+
+@mixin styleButton {
+    background: $ColorTerciario;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 #ffffff30;
+    color: $ColorClaro;
+    display: block;
+    font-size: 1.6rem;
+    margin: 50px auto;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 300px;
+}
+
+@mixin styleArticle {
+    border: 1px solid #ffffff50;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #ffffff20;
+    margin: 50px auto;
+    padding: 50px 20px;
+    max-width: 300px;
+    &--icon {
+        @include colorText;
+        font-size: 6rem;
+        margin-bottom: 20px;
+    }
+    &--title {
+        color: $ColorClaro;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    &--description {
+        color: $ColorSecundario;
+        font-size: 1.4rem;
+        margin-top: 10px;
+        line-height: 2.5rem;
+    }
+}
+
+@mixin widthDesktop {
+    width: calc(100% - 250px);
+    margin-left: auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: $Font1;
+}
+
+body {
+    position: relative;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 100%;
+    background: $ColorPrimario;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $ColorPrimario2;
+}
+body::-webkit-scrollbar-button {
+    background: $ColorPrimario2;
+}

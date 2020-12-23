@@ -1,0 +1,136 @@
+.profile {
+    background: $ColorPrimario;
+    min-width: 320px;
+    padding: 100px 0;
+    width: 100%;
+    &__header {
+        @include styleSpan;
+        position: relative;
+    }
+    &__header::before {
+        @include styleBefore;
+    }
+    &__title {
+        @include styleTitle;
+    }
+    .slider__container {
+        display: block;
+        height: 100%;
+        margin: 50px auto 0 auto;
+        max-width: 640px;
+        min-width: 320px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        .slides{
+            display: flex;
+            height: 100%;
+            min-width: 320px;
+            width: 400%;
+            input[name=arrow] {
+                position: absolute;
+                visibility: hidden;
+            }
+            #a1:checked ~ .s1 {
+                margin-left: 0;
+            }
+            #a2:checked ~ .s1 {
+                margin-left: -25%;
+            }
+            #a3:checked ~ .s1 {
+                margin-left: -50%;
+            }
+            #a4:checked ~ .s1 {
+                margin-left: -75%;
+            }
+            .slide {
+                min-width: 320px;
+                padding-bottom: 30px;
+                position: relative;
+                transition: .6s;
+                width: 100%;
+                .img {
+                    position: relative;
+                    width: 100%;
+                    img{
+                        height: auto;
+                        min-width: 320px;
+                        width: 100vw;
+                    }
+                    a {
+                        background: linear-gradient(45deg,#3060e570 0%,#4785de70 0%,#2ac39c70 100%);
+                        display: none;
+                        height: 100%;
+                        position: absolute;
+                        text-decoration: none;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 100vw;
+                        i {
+                            color: $ColorClaro;
+                            display: inline-block;
+                            font-size: 4rem;
+                            margin: calc(26%) 0;
+                            opacity: 1;
+                            text-align: center;
+                        }
+                    }
+                }
+                .img:hover a {
+                    display: inline-block;
+                }
+                a {
+                    color: $ColorClaro;
+                    display: inline-block;
+                    font-size: 2rem;
+                    position: relative;
+                    padding-top: 10px;
+                    text-decoration: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 100vw;
+                    min-width: 320px;
+                }
+                a:hover {
+                    @include colorText;
+                }
+            }
+        }
+        .navigation {
+            bottom: 0px;
+            display: flex;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            .bar {
+                border: 1px solid $ColorClaro;
+                border-radius: 5px;
+                cursor: pointer;
+                height: 10px;
+                margin: 6px;
+                transition: .4s;
+                width: 50px;
+            }
+            .bar:hover {
+                background: $ColorTerciario;
+            }
+        }
+    }
+    &__description {
+        color: $ColorClaro;
+        font-size: 1.6rem;
+        line-height: 25px;
+        margin: 50px auto;
+        min-width: 320px;
+        text-align: center;
+        width: 90%;
+    }
+    &__button {
+        @include styleButton;
+    }
+}
+
+
+

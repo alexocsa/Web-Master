@@ -1,0 +1,74 @@
+.service {
+    background: $ColorPrimario2;
+    padding: 100px 0;
+    min-width: 320px;
+    width: 100%;
+    &__header {
+        @include styleSpan;
+    }
+    &__header::before {
+        @include styleBefore;
+    }
+    &__title {
+        @include styleTitle;
+    }
+    &__container {
+        min-width: 280px;
+        margin: 100px auto;
+        text-align: center;
+        width: 90%;
+        .article {
+            position: relative;
+            &__global{
+                @include styleArticle;
+                backface-visibility: hidden;
+                position: relative;
+                transform: perspective(600px) rotateY(0deg);
+                transition: transform .6s linear;
+            }
+            .box__reverse {
+                backface-visibility: hidden;
+                background: $ColorPrimario;
+                border-radius: 10px;
+                margin: 0 auto;
+                max-width: 300px;
+                padding: 50px 20px;
+                position: absolute;
+                transform: perspective(600px) rotateY(180deg);
+                transition: transform .6s linear;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                span {
+                    color: $ColorClaro;
+                    display: block;
+                    font-size: 2rem;
+                    margin: 0 auto;
+                }
+                p {
+                    color: $ColorSecundario;
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        .article:hover > .article__global {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .article:hover > .box__reverse {
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    &__description {
+        color: $ColorSecundario;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        margin: 50px auto 0 auto;
+        min-width: 280px;
+        text-align: center;
+        width: 90%;
+    }
+}

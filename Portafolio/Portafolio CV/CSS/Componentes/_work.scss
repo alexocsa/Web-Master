@@ -1,0 +1,29 @@
+.work {
+    background: $ColorPrimario2;
+    min-width: 320px;
+    padding: 100px 0 0 0;
+    width: 100%;
+    span {
+        @include styleSpan;
+    }
+    span::before {
+        @include styleBefore;
+    }
+    h3 {
+        @include styleTitle;
+    }
+    &__article {
+        margin: 50px auto 0 auto;
+        min-width: 280px;
+        text-align: center;
+        width: 90%;
+        .article__global{
+            @include styleArticle;
+        }
+    }
+    img {
+        height: auto;
+        padding-top: 50px;
+        width: 100%;
+    }
+}
